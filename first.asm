@@ -3,12 +3,12 @@
 
 .include "atmel/tn45def.inc"
 
-;=[ Code Segment ]==============================================================
+;=[ Code Segment ]======================================================
 
 .cseg
 .org 0x0000
 
-;=[ Interrupts Table ]==========================================================
+;=[ Interrupts Table ]==================================================
 
 	rjmp RESET			; RESET
 	reti				; INT0
@@ -26,11 +26,11 @@
 	reti				; USI_START
 	reti				; USI_OVF
 
-;=[ Program Start ]=============================================================
+;=[ Program Start ]=====================================================
 
 RESET:
 
-;-[ Initialization ]--------------------------------------------------------
+;-[ Initialization ]------------------------------------------------
 
 	; init stack
 	ldi	r16, HIGH( RAMEND )
@@ -43,11 +43,10 @@ RESET:
 	ldi	r16, 1 << ACD
 	out	ACSR, r16
 
-	; init interrupts
-	; sei - can't do until complete interrupt table
+	; TODO: init interrupts
 
 
-;-[ Main Routine ]----------------------------------------------------------
+;-[ Main Routine ]--------------------------------------------------
 
 MAIN_CYCLE:
 	rjmp MAIN_CYCLE
