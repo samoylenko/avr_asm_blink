@@ -1,6 +1,7 @@
+CC = avra
 
 first.hex: first.asm
-	avra first.asm
+	$(CC) first.asm
 
 clean:
-	rm *.obj *.hex *.cof
+	rm -f *.obj *.hex *.cof
