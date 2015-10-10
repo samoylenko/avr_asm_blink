@@ -11,7 +11,7 @@ It is supposed to be fully compatible with Atmel Studio, but I am yet to test it
 | Make Command		| Description			|
 |-----------------------|-------------------------------|
 | make 			| Compiles the code into .hex	|
-| make flash		| Flash program into chip	|
-| make chuperase	| Ease chip			|
+| make flash		| Program chip			|
+| make chiperase	| Erase chip			|
 | make programfuse	| Program fuses for 1 Mhz	|
 | make clean            | Cleanup working files         |
