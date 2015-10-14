@@ -28,6 +28,8 @@
 
 ;=[ Interrupt handlers ]================================================
 
+;-[ Timer 0 Overflow ]----------------------------------------------
+
 TIM0_OVF_ISR:
 
 	push	r16
@@ -35,8 +37,8 @@ TIM0_OVF_ISR:
 	push	r16
 
 	in		r16, PORTB
-;	ldi		r17, ( 1 << PB4 )	; r17 is always PB4  
-	eor		r16, r17		; invert PB4
+;	ldi		r17, ( 1 << PB4 )	; r17 is always PB4
+	eor		r16, r17			; invert PB4
 	out		PORTB, r16
 
 	pop		r16
@@ -75,7 +77,7 @@ RESET:
 	ldi		r16, 1 << TOV0
 	out		TIFR, r16
 	ldi		r16, 1 << TOIE0
-	out		TIMSK, r16 
+	out		TIMSK, r16
 	sei
 
 ;-[ Main Routine ]--------------------------------------------------
