@@ -66,7 +66,7 @@ RESET:
 
 	; configure port B
 	ldi		r17, ( 1 << PORTB4 ) 	; everything but PB4 is input
-	out		DDRB, r16
+	out		DDRB, r17
 	clr		r16;
 	out		PORTB, r16		; disabe pull-ups and set output to ground
 
