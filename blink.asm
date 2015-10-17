@@ -68,7 +68,7 @@ RESET:
 	ldi		r17, ( 1 << PORTB4 ) 	; everything but PB4 is input
 	out		DDRB, r17
 	clr		r16;
-	out		PORTB, r16		; disabe pull-ups and set output to ground
+	out		PORTB, r16		; disable pull-ups and set output to ground
 
 	; init Timer 0 and enable interrupts
 	; 1Mhz / 1024 / 256 overflow, ~3.8 events, ~2 blinks / sec
